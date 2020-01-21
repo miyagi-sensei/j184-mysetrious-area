@@ -24,13 +24,15 @@ int main() {
             } else {
                 x++;
             }
-        } else if (x <= 3) {
-            x--;
-        } else if ((x % 3 == 1) && (H[x / 3 - 1] >= y)) {
-            to_right = true;
-            y--;
         } else {
-            x--;
+            if (x < 3) {    // prevent access H[-1] when x < 3
+                x--;
+            } else if ((x % 3 == 1) && (H[x / 3 - 1] >= y)) {
+                to_right = true;
+                y--;
+            } else {
+                x--;
+            }
         }
         steps++;
     }
