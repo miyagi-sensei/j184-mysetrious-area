@@ -1,3 +1,5 @@
+// simulation exercise for beginners
+// students only need to write the flying logic and will see a graphical representation of the flight path
 #include <iostream>
 using namespace std;
 int N, X, Y;
