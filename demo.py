@@ -1,4 +1,5 @@
 def print_area():
+    print()
     for i in reversed(range(1, N+1)):
         row = area[i]
         print('{0:2}'.format(i), end=' ')
@@ -6,6 +7,7 @@ def print_area():
     print('   ', end='')
     for i in range(1, 3*N+1):
         print('{0:2}'.format(i), end=' ')
+    print('\nbird is at: ({0}, {1}). press ENTER to see next step...'.format(x, y), end='')
 
 
 N = int(input())
@@ -38,5 +40,3 @@ while y > 0 and x > 0:
     area[y][x] = direction
     input()
     print_area()
-
-
